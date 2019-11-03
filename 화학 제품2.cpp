@@ -1,0 +1,3 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;int main() {ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);int t;cin >> t;while (t--) {int a, b, c, ab, bc, ca;cin >> a >> b >> c;cin >> ab >> bc >> ca;int make_ab = min(a, b), make_bc = min(b, c), s = 0;for (int i = 0; i <= make_ab; i++) {make_bc = min(b - i, c);for (int k = 0; k <= make_bc; k++) {int n = ab * i + bc * k + ca * min(a - i, c - k);if (s < n) s = n;}}cout<<s<<"\n";}}

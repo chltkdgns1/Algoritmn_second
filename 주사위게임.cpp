@@ -1,0 +1,2 @@
+#include <iostream>
+using namespace std;int main() {int a = 100, b = 100,n,a_s,b_s;cin >> n;for (int i = 0; i < n; i++) {cin >> a_s >> b_s;if (a_s > b_s) b -= a_s;else if (a_s < b_s) a -= b_s;}cout << a << endl << b << endl;}

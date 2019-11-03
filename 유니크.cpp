@@ -1,0 +1,2 @@
+#include <iostream>
+using namespace std;int arr[200][4]; int main() { int n, br = 0; cin >> n; for (int i = 0; i < n; i++) cin >> arr[i][0] >> arr[i][1] >> arr[i][2]; for (int i = 0; i < 3; i++) { for (int j = 0; j < n; j++) { for (int k = 0; k < n; k++) { if (arr[j][i] == arr[k][i] && j != k) { br = 1; break; } }if (br == 1) { br = 0; continue; }arr[j][3] += arr[j][i]; } }for (int i = 0; i < n; i++) cout << arr[i][3] << endl; }
